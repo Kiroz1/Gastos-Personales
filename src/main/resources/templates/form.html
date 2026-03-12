@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Nuevo gasto</title>
+</head>
+
+<body>
+
+<h1>Registrar gasto</h1>
+
+<form th:action="@{/guardar}" th:object="${gasto}" method="post">
+
+<input type="hidden" th:field="*{id}">
+
+<label>Descripción</label>
+<input type="text" th:field="*{descripcion}">
+
+<label>Categoría</label>
+<input type="text" th:field="*{categoria}">
+
+<label>Monto</label>
+<input type="number" step="0.01" th:field="*{monto}">
+
+<label>Fecha</label>
+<input type="date" th:field="*{fecha}">
+
+<button type="submit">Guardar</button>
+
+</form>
+
+</body>
+</html>

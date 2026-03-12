@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Gastos Personales</title>
+</head>
+
+<body>
+
+<h1>Lista de Gastos</h1>
+
+<a href="/nuevo">Nuevo gasto</a>
+
+<table border="1">
+
+<tr>
+<th>Descripción</th>
+<th>Categoría</th>
+<th>Monto</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+
+<tr th:each="gasto : ${gastos}">
+<td th:text="${gasto.descripcion}"></td>
+<td th:text="${gasto.categoria}"></td>
+<td th:text="${gasto.monto}"></td>
+<td th:text="${gasto.fecha}"></td>
+
+<td>
+<a th:href="@{/editar/{id}(id=${gasto.id})}">Editar</a>
+<a th:href="@{/eliminar/{id}(id=${gasto.id})}">Eliminar</a>
+</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>
