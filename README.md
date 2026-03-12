@@ -39,7 +39,6 @@ model → Entidades del sistema
 src/main/resources
 
 templates → Vistas HTML (Thymeleaf)
-static → Recursos estáticos (CSS, JS)
 
 ---
 
@@ -104,9 +103,7 @@ Próximas mejoras:
 * Diseño responsive
 * Filtros de gastos por fecha o categoría
 * Dashboard con estadísticas de gastos
-* Gráficas de análisis de gastos
-* Mejoras en validación de formularios
-* Refactorización del frontend
+
 
 ---
 
